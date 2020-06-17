@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> IMDb Movie Statistics</title>
+	<link rel="stylesheet" href="dropdown.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="index.js"></script>
+	<script src="histOrBarGraphs.js"></script>
+	<script src="resizeBins.js"></script>
+</head> 
+<body>
+	<h1 style="background-color: aquamarine; text-align: center" >IMDb Movie Statistics</h1>
+	
+  <select id="dataVariable">
+<option value="numCritics" selected="selected">Number of critics for review</option>
+<option value="duration" >Duration of the movie</option>
+<option value="actor1FbLikes">Actor 1 Facebook Likes</option>
+<option value="actor2FbLikes">Actor 2 Facebook Likes</option>
+<option value="actor3FbLikes">Actor 3 Facebook Likes</option>
+<option value="directorFbLikes">Director Facebook Likes</option>
+<option value="movieFbLikes">Movie Facebook Likes</option>
+<option value="imdbScore">IMDb Score</option>
+<option value="budget">Budget</option>
+<option value="movieGross">Movie Gross</option>
+<option value="genre">Genre</option>
+<option value="titleYear">Title Year</option>
+<option value="contentRating">Content Rating</option>
+<option value="country">Country</option>
+<option value="language">Language</option>
+</select>
+  <button class="dropbtn" id="variable">Update Bar Graph!</button>
+  	<div style="text-align:center;">
+  		<button id = "updateGraph" style="width:1000px; color:blue" type="button">
+  			<b>Drag Left (Right) to decrease (increase) the bin width</b>
+  		</button>
+  	</div>
+  	<div id="bar" ></div>
+	<br></br>
+	<div style="text-align:center; font-weight:bold;" id = "xWriting">
+  		Number of Critics for Review
+  	</div>
+</body> 
+</html>
